@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KshetraRakshak - Issue Reports</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .reports-container {
+            margin-top: 30px;
+        }
+
+        .report-card {
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+            display: flex;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .report-card {
+                flex-direction: column;
+            }
+        }
+
+        .report-image {
+            flex: 0 0 300px;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .report-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .report-details h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .report-meta {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .report-meta span {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .report-body {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            background-color: #ffeeba;
+            color: #856404;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="logo">KshetraRakshak (Geofence Guardian)</h1>
+            <nav class="main-nav">
+                <a href="index.html">Live Map</a>
+                <a href="reports.html" id="issueReportsBtn" style="color: var(--primary-color)">Issue Reports</a>
+                <a href="#about">About Project</a>
+                <a href="#contact">Contact Authority</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Public Infrastructure Issue Reports</h2>
+        <p>Verified complaints logged by citizens while physically present inside civic zones.</p>
+
+        <div class="reports-container">
+            <!-- Simulated Report -->
+            <div class="report-card">
+                <div class="report-image">
+                    <!-- Fake placeholder image from user -->
+                    <img src="images/potholes.png" alt="Destroyed Road">
+                </div>
+                <div class="report-details">
+                    <span class="status-badge">Pending Review</span>
+                    <h3>Severe Road Damage & Potholes</h3>
+                    <div class="report-meta">
+                        <span>📍 <strong>Location:</strong> Geeta Colony Bridge (High Traffic Bridge)</span>
+                        <span>🕒 <strong>Reported On:</strong> Today</span>
+                    </div>
+                    <div class="report-body">
+                        <p>The road surface immediately approaching the bridge from the eastern side is completely
+                            destroyed. It is full of deep potholes hidden by water logging due to recent rain. This is a
+                            severe hazard for two-wheelers and is causing major traffic bottlenecks during rush hour.
+                            Immediate attention and repair is required to avoid accidents.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 KshetraRakshak (Geofence Guardian) Initiative. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

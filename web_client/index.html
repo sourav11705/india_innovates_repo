@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KshetraRakshak - Geofence Guardian</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="logo">KshetraRakshak (Geofence Guardian)</h1>
+            <nav class="main-nav">
+                <a href="#" id="enableBtn">Enable Location Services</a>
+                <a href="reports.html" id="issueReportsBtn">Issue Reports</a>
+                <a href="#about">About Project</a>
+                <a href="#contact">Contact Authority</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Active Alert Banner -->
+        <div id="alertBanner" class="alert-banner hidden">
+            <div class="alert-content">
+                <span class="alert-icon">⚠️</span>
+                <div>
+                    <h3 id="alertTitle">Active Zone: None</h3>
+                    <p id="alertMessage">You are currently in a public zone. Please follow civic guidelines.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Left Side: Map -->
+            <section class="map-section">
+                <h2>Interactive Civic Zoning Map</h2>
+                <p>Ensure you are in an active zone to receive notifications and access the reporting system.</p>
+                <div id="map" class="map-wrapper"></div>
+                <div class="map-controls">
+                    <small>For demonstration, drag the 🚶‍♂️ marker on the map to simulate entering a zone.</small>
+                    <p id="locationText" class="loc-text">Location: Awaiting initialization...</p>
+                </div>
+            </section>
+
+            <!-- Right Side: Sidebar/Info -->
+            <aside class="sidebar-section">
+                <div class="info-block">
+                    <h3>Recent System Logs</h3>
+                    <ul id="logList" class="clean-list">
+                        <li class="empty-log">System running... waiting for zone triggers.</li>
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <h3>About Civic Zones</h3>
+                    <p>Civic zones are geographically designated areas requiring elevated public compliance with rules
+                        such as maintaining silence near hospitals, speed limits near schools, and observing traffic
+                        discipline on bridges.</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 CivicSense Initiative. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK (Modular) will be loaded in app.js via import, but for simplicity in vanilla JS we'll use compat libraries -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

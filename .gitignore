@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+env/
+venv/
+.env
+
+# Firebase Key
+serviceAccountKey.json
+
+# Node
+node_modules/
+
+# Streamlit
+.streamlit/
+*.csv
+
+# Flutter (failed mobile app)
+mobile_app/
+
+# OS
+.DS_Store
+Thumbs.db

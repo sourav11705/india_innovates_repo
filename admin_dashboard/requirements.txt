@@ -1,0 +1,7 @@
+streamlit
+folium
+streamlit-folium
+google-generativeai
+pillow
+firebase-admin
+google-auth
